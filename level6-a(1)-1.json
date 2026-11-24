@@ -1,0 +1,434 @@
+[
+  {
+    "word": "abbreviate",
+    "meaning": "縮寫、縮短",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "abide",
+    "meaning": "容忍、忍受、遵守",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "aboriginal",
+    "meaning": "原住民的、原生的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "abstraction",
+    "meaning": "抽象、抽象概念",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "abundance",
+    "meaning": "豐富、充足",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "academy",
+    "meaning": "學院",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "accessory",
+    "meaning": "配件、附件",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "acclaim",
+    "meaning": "稱讚、喝采",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "accordance",
+    "meaning": "一致、符合",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "accordingly",
+    "meaning": "因此、依照",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "accountable",
+    "meaning": "負有責任的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "accumulate",
+    "meaning": "累積、堆積",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "accumulation",
+    "meaning": "累積",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "accusation",
+    "meaning": "指控",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "accustom",
+    "meaning": "使習慣",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "acne",
+    "meaning": "粉刺、痤瘡",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "acre",
+    "meaning": "英畝",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "adaptation",
+    "meaning": "適應、改編",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "addiction",
+    "meaning": "上癮、沉迷",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "administer",
+    "meaning": "管理、施行",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "admiral",
+    "meaning": "海軍上將",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "adolescence",
+    "meaning": "青春期",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "advisory",
+    "meaning": "顧問的、諮詢的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "aesthetic",
+    "meaning": "美學的、審美的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "affectionate",
+    "meaning": "充滿感情的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "affiliate",
+    "meaning": "使隸屬、分公司",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "affirm",
+    "meaning": "斷言、證實",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "airtight",
+    "meaning": "密閉的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "airway",
+    "meaning": "航線、通風道",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "algebra",
+    "meaning": "代數",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "alienate",
+    "meaning": "疏遠",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "align",
+    "meaning": "對齊、結盟",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "allege",
+    "meaning": "斷言、宣稱",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "alligator",
+    "meaning": "短吻鱷",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "altitude",
+    "meaning": "高度、海拔",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "aluminum",
+    "meaning": "鋁",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "ambiguity",
+    "meaning": "模糊、歧義",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "amid / amidst",
+    "meaning": "在……之中",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "amplify",
+    "meaning": "擴大、詳述",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "analogy",
+    "meaning": "類比、比擬",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "analytic / analytical",
+    "meaning": "分析的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "anchor",
+    "meaning": "錨、使固定",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "animate",
+    "meaning": "賦予生命、有生命的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "annoyance",
+    "meaning": "煩惱",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "antenna",
+    "meaning": "觸角、天線",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "anthem",
+    "meaning": "讚美詩、聖歌",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "antibiotic",
+    "meaning": "抗生素",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "anticipation",
+    "meaning": "預期、期待",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "antonym",
+    "meaning": "反義字",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "applaud",
+    "meaning": "鼓掌、讚同",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "applicable",
+    "meaning": "適用的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "apprentice",
+    "meaning": "學徒",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "approximate",
+    "meaning": "近似的、接近",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "archaeology",
+    "meaning": "考古學",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "archive",
+    "meaning": "檔案、存檔",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "arithmetic",
+    "meaning": "算術",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "ascend",
+    "meaning": "上升",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "aspire",
+    "meaning": "渴望",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "assassinate",
+    "meaning": "暗殺",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "asthma",
+    "meaning": "氣喘、哮喘",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "astray",
+    "meaning": "迷路的、迷路地",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "astronaut",
+    "meaning": "太空人",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "astronomer",
+    "meaning": "天文學家",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "astronomy",
+    "meaning": "天文學",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "attain",
+    "meaning": "達成、獲得",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "attendant",
+    "meaning": "服務人員、侍者",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "audit",
+    "meaning": "審核、查帳",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "auditorium",
+    "meaning": "禮堂、會堂",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "avert",
+    "meaning": "防止、避免",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "aviation",
+    "meaning": "航空、航空學",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "awesome",
+    "meaning": "令人敬畏的",
+    "level": 6,
+    "letter": "A"
+  },
+  {
+    "word": "awhile",
+    "meaning": "暫時、片刻",
+    "level": 6,
+    "letter": "A"
+  }
+]
