@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Learning Lab</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fc;color:#25324a}
+header{background:#264b91;color:white;padding:25px 16px;text-align:center}
+header h1{margin:0 0 10px}
+main{max-width:700px;margin:auto;padding:16px}
+.card{background:white;border-radius:15px;padding:18px;margin-bottom:15px;box-shadow:0 2px 8px #0001}
+button{border:0;border-radius:9px;padding:11px 15px;background:#dce7ff;color:#18396e;font-size:15px;cursor:pointer}
+button.active{background:#264b91;color:white}
+input{width:100%;padding:13px;border:1px solid #ccc;border-radius:9px;font-size:16px}
+.word{padding:13px;border-bottom:1px solid #eee;cursor:pointer}
+.word small{display:block;color:#68758a;margin-top:5px}
+#detail{line-height:1.8}
+#options button{display:block;width:100%;margin:8px 0;text-align:left}
+.correct{background:#b9efcb!important}
+.wrong{background:#ffc5c5!important}
+.muted{color:#68758a}
+</style>
+</head>
+<body>
+<header>
+<h1>English Learning Lab</h1>
+<p>每天進步一點，英文慢慢變強！</p>
+</header>
+<main>
+<div class="card">
+<button id="learnTab" class="active" onclick="showTab('learn')">單字學習</button>
+<button id="quizTab" onclick="showTab('quiz')">單字測驗</button>
+<p class="muted">Level 6 · A</p>
+</div>
+
+<section id="learn">
+<div class="card">
+<h2>單字搜尋</h2>
+<input id="search" placeholder="搜尋英文或中文" oninput="renderWords()">
+<p id="count"></p>
+<div id="wordList"></div>
+</div>
+<div class="card" id="detail">
+<h2>單字詳細資料</h2>
+<p>點擊單字即可查看。</p>
+</div>
+</section>
+
+<section id="quiz" hidden>
+<div class="card">
+<h2>單字測驗</h2>
+<p id="progress"></p>
+<h2 id="question"></h2>
+<div id="options"></div>
+<p id="feedback"></p>
+<button onclick="nextQuestion()">下一題</button>
+</div>
+</section>
+</main>
+
+<script>
+let words=[];
+let current=null;
+let score=0;
+let total=0;
+let answered=false;
+
+async function loadWords(){
+ try{
+  const res=await fetch("./level6-a.json");
+  if(!res.ok)throw new Error("找不到單字檔");
+  const data=await res.json();
+  if(!Array.isArray(data))throw new Error("資料格式錯誤");
+  words=data.filter(w=>w.word&&w.meaning);
+  if(!words.length)throw new Error("單字資料為空");
+  renderWords();
+  nextQuestion();
+ }catch(e){
+  document.getElementById("count").textContent=
+   "載入失敗："+e.message;
+ }
+}
+
+function renderWords(){
+ const q=document.getElementById("search").value.toLowerCase();
+ const filtered=words.filter(w=>
+  w.word.toLowerCase().includes(q)||
+  w.meaning.includes(q)
+ );
+ document.getElementById("count").textContent=
+  "找到 "+filtered.length+" 個單字";
+ const list=document.getElementById("wordList");
+ list.replaceChildren();
+ filtered.forEach(w=>{
+  const item=document.createElement("div");
+  item.className="word";
+  const name=document.createElement("b");
+  name.textContent=w.word;
+  const meaning=document.createElement("small");
+  meaning.textContent=w.meaning;
+  item.append(name,meaning);
+  item.onclick=()=>showWord(w);
+  list.appendChild(item);
+ });
+}
+
+function showWord(w){
+ const d=document.getElementById("detail");
+ d.replaceChildren();
+ const title=document.createElement("h2");
+ title.textContent=w.word;
+ const meaning=document.createElement("p");
+ meaning.textContent="中文："+w.meaning;
+ const speak=document.createElement("button");
+ speak.textContent="🔊 英文發音";
+ speak.onclick=()=>speakWord(w.word);
+ d.append(title,meaning,speak);
+ d.scrollIntoView({behavior:"smooth"});
+}
+
+function speakWord(word){
+ if(!("speechSynthesis" in window)){
+  alert("此瀏覽器不支援語音播放");
+  return;
+ }
+ speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(word.split("/")[0].trim());
+ u.lang="en-US";
+ u.rate=0.85;
+ speechSynthesis.speak(u);
+}
+
+function showTab(tab){
+ document.getElementById("learn").hidden=tab!=="learn";
+ document.getElementById("quiz").hidden=tab!=="quiz";
+ document.getElementById("learnTab").classList.toggle("active",tab==="learn");
+ document.getElementById("quizTab").classList.toggle("active",tab==="quiz");
+}
+
+function nextQuestion(){
+ if(words.length<4)return;
+ answered=false;
+ document.getElementById("feedback").textContent="";
+ current=words[Math.floor(Math.random()*words.length)];
+ const wrong=words.filter(w=>w.word!==current.word)
+  .sort(()=>Math.random()-0.5).slice(0,3);
+ const options=[current,...wrong].sort(()=>Math.random()-0.5);
+ document.getElementById("question").textContent=current.word;
+ document.getElementById("progress").textContent=
+  "已作答："+total+" 題｜答對："+score+" 題";
+ const box=document.getElementById("options");
+ box.replaceChildren();
+ options.forEach(w=>{
+  const b=document.createElement("button");
+  b.textContent=w.meaning;
+  b.onclick=()=>{
+   if(answered)return;
+   answered=true;
+   total++;
+   if(w===current){
+    score++;
+    b.classList.add("correct");
+    document.getElementById("feedback").textContent="答對了！";
+   }else{
+    b.classList.add("wrong");
+    document.getElementById("feedback").textContent=
+     "正確答案："+current.meaning;
+   }
+   document.getElementById("progress").textContent=
+    "已作答："+total+" 題｜答對："+score+" 題";
+  };
+  box.appendChild(b);
+ });
+}
+loadWords();
+</script>
+</body>
+</html>
